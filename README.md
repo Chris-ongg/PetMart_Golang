@@ -1,7 +1,7 @@
 # PET's MART (Golang Server)
 
 ## Introduction
-This is a code repository for a personal fullstack project on ReactJS eCommerce web Pet Shop application. 
+This is a code repository for a personal project to create an eCommerce web Pet products store. 
 
 The project implement a complete sample pattern for a real-life eCommerce web application including user login/logout, registration, landing page design, account information and shopping cart and store checkout flow. 
 
