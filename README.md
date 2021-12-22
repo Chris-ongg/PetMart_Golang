@@ -1,23 +1,23 @@
 # PET's MART (Golang Server)
 
-##Introduction
+## Introduction
 This is a code repository for a personal fullstack project on ReactJS eCommerce web Pet Shop application. 
 
 The project implement a complete sample pattern for a real-life eCommerce web application including user login/logout, registration, landing page design, account information and shopping cart and store checkout flow. 
 
-###Landing Page
+### Landing Page
 ![img_4.png](img_4.png)
 
-###Store design
+### Store design
 ![img.png](img.png)
 
-###User Login/Logout & Registration
+### User Login/Logout & Registration
 ![img_1.png](img_1.png)
 
-###Shopping Cart
+### Shopping Cart
 ![img_2.png](img_2.png)
 
-##Built with
+## Built with
 - ReactJS - Used to implement webpage logic, visuals and animations
 - Golang - For server implementation at the backend
 - GraphQL - API 
