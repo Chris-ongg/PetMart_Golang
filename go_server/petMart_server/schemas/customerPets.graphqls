@@ -1,0 +1,38 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+type petDetails {
+  name: String!
+  gender: String!
+  species: String!
+  petBreed: String!
+  age: String!
+  weight: String!
+  healthConcern: String!
+  ownerEmail: String!
+}
+
+input newPetDetails {
+  name: String!
+  gender: String!
+  species: String!
+  petBreed: String!
+  age: String!
+  weight: String!
+  healthConcern: String!
+  ownerEmail: String!
+}
+
+input customerEmailInput {
+  email: String!
+}
+
+type Query {
+  getCustomerPets(customer: customerEmailInput!): [petDetails]
+}
+
+type Mutation {
+  registerPet(newPet: newPetDetails): petDetails
+}
+

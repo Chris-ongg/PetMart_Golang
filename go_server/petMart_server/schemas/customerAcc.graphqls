@@ -1,0 +1,41 @@
+type customerDetails {
+    name: String!
+    email: String!
+}
+
+type authenticatedUser {
+    name: String!
+    email: String!
+    accessToken: String!
+}
+
+type encryptKey {
+    key: String!
+}
+
+input customerRegistrationInput {
+    name: String!
+    email: String!
+    password: String!
+}
+
+input customerLoginInput {
+    email: String!
+    password: String!
+}
+
+input accessTokenInput {
+    token: String!
+}
+
+extend type Query {
+    customerEmailLogin(login: customerLoginInput): authenticatedUser
+    customerGoogleLogin(login: accessTokenInput!): authenticatedUser
+    verifyAccessToken(token: accessTokenInput!) : authenticatedUser
+    encryptionKey:encryptKey
+}
+
+extend type Mutation {
+    customerRegistration(register: customerRegistrationInput!): customerDetails
+    customerLogout(logout: customerEmailInput!): customerDetails
+}

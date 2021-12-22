@@ -1,0 +1,45 @@
+type pastOrders {
+    date: String!
+    orderID: Int!
+    store: String!
+    items: Int!
+    total: Int!
+    trackingID: String!
+    status: String!
+}
+
+type cartItems {
+    itemID: Int!
+    name: String!
+    price: Int!
+    quantity: Int!
+    imagePath: String!
+}
+
+input cartItemsInput {
+    itemID: Int!
+    name: String!
+    price: Int!
+    quantity: Int!
+    imagePath: String!
+}
+
+input customerCart {
+    email: String!
+    emptyCart: Boolean!
+    cart: [cartItemsInput]!
+}
+
+type customerEmailAdd {
+    email: String!
+}
+
+extend type Query{
+    searchShoppingCart(cart: customerEmailInput): [cartItems]
+    customerPastOrders(customer: customerEmailInput): [pastOrders]
+}
+
+extend type Mutation{
+    saveShoppingCart(saveCart: customerCart): customerEmailAdd
+    saveCustomerOrder(saveOrder: customerCart): customerEmailAdd
+}

@@ -1,0 +1,19 @@
+type productList {
+    itemID: Int!
+    name: String!
+    healthConcern: String!
+    species: String!
+    price: Int!
+    stock: Int!
+    imagePath: String!
+}
+
+input searchInput {
+    searchType: Int!
+    species: String!
+    healthConcern: String!
+}
+
+extend type Query {
+    searchWarehouse(search: searchInput!): [productList]
+}
